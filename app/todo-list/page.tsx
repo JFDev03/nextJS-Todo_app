@@ -55,10 +55,12 @@ const TodoList = () => {
 
     return (
         <>
+        <div className="flex justify-end me-10 mt-4">
             <button className="btn" onClick={openModal}>
                 Open Modal
             </button>
-            <div>TodoList</div>
+        </div>
+            <div className="text-center text-md">TodoList</div>
             <ListForm id="my_modal_5" onClick={closeModal} handleFetchTask={handleFetchTask} />
             <div className="text-center text-md">Task List Tables</div>
             <ListTables taskLists={tasks} handleFetchTask={handleFetchTask}/>

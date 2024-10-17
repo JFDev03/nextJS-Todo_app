@@ -53,7 +53,7 @@ const listTables:React.FC<ListTablesProps> = ({taskLists,handleFetchTask}) => {
         }
     }
   return (
-    <table>
+    <table className='table table-zebra-zebra'>
         <thead>
             <tr>
                 <th>Index</th>
@@ -63,7 +63,7 @@ const listTables:React.FC<ListTablesProps> = ({taskLists,handleFetchTask}) => {
         </thead>
         <tbody>
             {taskLists.map((list:taskListType, index: number) => <tr key={list.id}>
-                <td>{ index++ }</td>
+                <td>{ index+1 }</td>
                 <td>{ list.task }</td>
                 <td>{ list.status === 0? <button className='btn btn-outline btn-success' 
                 onClick={()=>{
